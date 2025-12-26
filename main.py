@@ -2,8 +2,8 @@ from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 import os
 
-TOKEN = os.getenv("BOT_TOKEN")
-
+TOKEN = os.environ["BOT_TOKEN"]
+print("BOT_TOKEN loaded, length:", len(TOKEN))
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("GIGL Bot çalışıyor ✅")
 
